@@ -42,6 +42,10 @@
         .nav-link.active span:last-child {
             color: #fff; /* text-white */
         }
+        /* Hide all pages by default */
+        .page-content {
+            display: none;
+        }
     </style>
 </head>
 <body class="text-slate-400 antialiased">
@@ -59,17 +63,25 @@
                     
                     <nav class="nav hidden lg:block" aria-label="In-page jump links">
                         <ul class="mt-16 w-max">
-                            <li><a class="nav-link group flex items-center py-3 active" href="#about">
-                                <span class="nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-white group-focus-visible:w-16 group-focus-visible:bg-white motion-reduce:transition-none"></span>
-                                <span class="nav-text text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-white group-focus-visible:text-white">About</span>
+                            <li><a class="nav-link group flex items-center py-3 active" href="#" onclick="showPage('home')">
+                                <span class="nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-white"></span>
+                                <span class="nav-text text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-white">Home</span>
                             </a></li>
-                            <li><a class="nav-link group flex items-center py-3" href="#experience">
-                                <span class="nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-white group-focus-visible:w-16 group-focus-visible:bg-white motion-reduce:transition-none"></span>
-                                <span class="nav-text text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-white group-focus-visible:text-white">Experience</span>
+                            <li><a class="nav-link group flex items-center py-3" href="#" onclick="showPage('resume')">
+                                <span class="nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-white"></span>
+                                <span class="nav-text text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-white">Resume</span>
                             </a></li>
-                            <li><a class="nav-link group flex items-center py-3" href="#skills">
-                                <span class="nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-white group-focus-visible:w-16 group-focus-visible:bg-white motion-reduce:transition-none"></span>
-                                <span class="nav-text text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-white group-focus-visible:text-white">Skills</span>
+                            <li><a class="nav-link group flex items-center py-3" href="#" onclick="showPage('casestudies')">
+                                <span class="nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-white"></span>
+                                <span class="nav-text text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-white">Case Studies</span>
+                            </a></li>
+                             <li><a class="nav-link group flex items-center py-3" href="#" onclick="showPage('resources')">
+                                <span class="nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-white"></span>
+                                <span class="nav-text text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-white">Resources</span>
+                            </a></li>
+                             <li><a class="nav-link group flex items-center py-3" href="#" onclick="showPage('contact')">
+                                <span class="nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-white"></span>
+                                <span class="nav-text text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-white">Contact</span>
                             </a></li>
                         </ul>
                     </nav>
@@ -87,121 +99,106 @@
             <!-- Right Column: Main Content -->
             <main id="content" class="pt-24 lg:w-1/2 lg:py-24">
                 
-                <!-- About Section -->
-                <section id="about" class="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24" aria-label="About me">
-                    <div class="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-slate-900/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
-                        <h2 class="text-sm font-bold uppercase tracking-widest text-white lg:sr-only">About</h2>
-                    </div>
+                <!-- Home Page -->
+                <section id="home" class="page-content" style="display: block;">
+                    <h2 class="text-sm font-bold uppercase tracking-widest text-white mb-4">About</h2>
                     <div>
                         <p class="mb-4">Specialized in BI strategy, KPI management, data visualization, and storytelling, I thrive on transforming complex data into clear, actionable intelligence. Whether it's optimizing decision-making or streamlining processes, my goal is to empower businesses with the clarity they need to succeed.</p>
                         <p>Because let's face it—gut feelings are great for picking dinner, but not for business strategy!</p>
                     </div>
                 </section>
 
-                <!-- Experience Section -->
-                <section id="experience" class="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24" aria-label="Work experience">
-                    <div class="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-slate-900/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
-                        <h2 class="text-sm font-bold uppercase tracking-widest text-white lg:sr-only">Experience</h2>
-                    </div>
-                    <div>
+                <!-- Resume Page -->
+                <section id="resume" class="page-content">
+                    <h2 class="text-sm font-bold uppercase tracking-widest text-white mb-4">Resume</h2>
+                    <!-- Experience Section -->
+                    <div class="mb-16">
+                        <h3 class="text-lg font-medium text-white mb-4">Work Experience</h3>
                         <ol class="group/list">
                             <!-- Experience Item 1 -->
                             <li class="mb-12">
-                                <div class="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
-                                    <div class="absolute -inset-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"></div>
-                                    <header class="z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-slate-500 sm:col-span-2" aria-label="2022 to Present">May 2022 — Present</header>
+                                <div class="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4">
+                                    <header class="z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-slate-500 sm:col-span-2">May 2022 — Present</header>
                                     <div class="z-10 sm:col-span-6">
-                                        <h3 class="font-medium leading-snug text-white">
-                                            <div><a class="inline-flex items-baseline font-medium leading-tight text-white hover:text-teal-300 focus-visible:text-teal-300 group/link text-base" href="#" target="_blank" rel="noreferrer noopener" aria-label="BI Expert Senior Analyst at Vesper B. V. (opens in a new tab)"><span class="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span><span>BI Expert Senior Analyst · Vesper B. V.</span></a></div>
-                                        </h3>
-                                        <p class="mt-2 text-sm leading-normal">Led definition and implementation of cross-functional KPIs. Delivered Tableau dashboards to support data-driven decision-making. Worked with Product teams to evaluate feature releases using statistical analysis. Managed the development of a centralized BI database.</p>
-                                        <ul class="mt-2 flex flex-wrap" aria-label="Technologies used">
-                                            <li class="mr-1.5 mt-2"><div class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300">Tableau</div></li>
-                                            <li class="mr-1.5 mt-2"><div class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300">SQL</div></li>
-                                            <li class="mr-1.5 mt-2"><div class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300">Python</div></li>
-                                        </ul>
+                                        <h4 class="font-medium leading-snug text-white">BI Expert Senior Analyst · Vesper B. V.</h4>
+                                        <p class="mt-2 text-sm leading-normal">Led definition and implementation of cross-functional KPIs. Delivered Tableau dashboards to support data-driven decision-making...</p>
+                                        <ul class="mt-2 flex flex-wrap"><li class="mr-1.5 mt-2"><div class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300">Tableau</div></li><li class="mr-1.5 mt-2"><div class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300">SQL</div></li><li class="mr-1.5 mt-2"><div class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300">Python</div></li></ul>
                                     </div>
                                 </div>
                             </li>
                             <!-- Experience Item 2 -->
                             <li class="mb-12">
-                                <div class="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
-                                    <div class="absolute -inset-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"></div>
-                                    <header class="z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-slate-500 sm:col-span-2" aria-label="2020 to 2022">Feb 2020 — Apr 2022</header>
+                                <div class="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4">
+                                    <header class="z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-slate-500 sm:col-span-2">Feb 2020 — Apr 2022</header>
                                     <div class="z-10 sm:col-span-6">
-                                        <h3 class="font-medium leading-snug text-white">
-                                            <div><a class="inline-flex items-baseline font-medium leading-tight text-white hover:text-teal-300 focus-visible:text-teal-300 group/link text-base" href="#" target="_blank" rel="noreferrer noopener" aria-label="Data Analyst at PwC (opens in a new tab)"><span class="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span><span>Data Analyst · PwC</span></a></div>
-                                        </h3>
-                                        <p class="mt-2 text-sm leading-normal">Collaborated on automating file ingestion using Alteryx, reducing processing time by 40%. Developed Tableau dashboards to track app usage metrics and optimized data models for financial reporting.</p>
-                                        <ul class="mt-2 flex flex-wrap" aria-label="Technologies used">
-                                            <li class="mr-1.5 mt-2"><div class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300">Alteryx</div></li>
-                                            <li class="mr-1.5 mt-2"><div class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300">Tableau</div></li>
-                                            <li class="mr-1.5 mt-2"><div class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300">Data Modeling</div></li>
-                                        </ul>
+                                        <h4 class="font-medium leading-snug text-white">Data Analyst · PwC</h4>
+                                        <p class="mt-2 text-sm leading-normal">Collaborated on automating file ingestion using Alteryx, reducing processing time by 40%...</p>
+                                        <ul class="mt-2 flex flex-wrap"><li class="mr-1.5 mt-2"><div class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300">Alteryx</div></li><li class="mr-1.5 mt-2"><div class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300">Tableau</div></li></ul>
                                     </div>
                                 </div>
                             </li>
                         </ol>
                     </div>
-                </section>
-
-                <!-- Skills Section -->
-                <section id="skills" class="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24" aria-label="Skills">
-                     <div class="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-slate-900/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
-                        <h2 class="text-sm font-bold uppercase tracking-widest text-white lg:sr-only">Skills</h2>
-                    </div>
+                     <!-- Skills Section -->
                     <div>
-                        <ul class="grid grid-cols-2 gap-4">
-                            <li class="rounded-lg bg-slate-800/50 p-4 border border-slate-800">
-                                <h3 class="font-medium text-white">Technical Skills</h3>
-                                <p class="text-sm mt-2">Python, SQL, Tableau, AWS, BigQuery, Airflow, A/B Testing.</p>
-                            </li>
-                            <li class="rounded-lg bg-slate-800/50 p-4 border border-slate-800">
-                                <h3 class="font-medium text-white">Soft Skills</h3>
-                                <p class="text-sm mt-2">Data Storytelling, Stakeholder Management, Team Mentoring.</p>
-                            </li>
-                             <li class="rounded-lg bg-slate-800/50 p-4 border border-slate-800">
-                                <h3 class="font-medium text-white">Education</h3>
-                                <p class="text-sm mt-2">MSc, Marketing Data Analytics and Metrics.</p>
-                            </li>
-                             <li class="rounded-lg bg-slate-800/50 p-4 border border-slate-800">
-                                <h3 class="font-medium text-white">Interests</h3>
-                                <p class="text-sm mt-2">Chess, Kaggle, Houseplants, Pizza, Board Games.</p>
-                            </li>
+                        <h3 class="text-lg font-medium text-white mb-4">Skills</h3>
+                         <ul class="grid grid-cols-2 gap-4">
+                            <li class="rounded-lg bg-slate-800/50 p-4 border border-slate-800"><h4 class="font-medium text-white">Technical</h4><p class="text-sm mt-2">Python, SQL, Tableau, AWS, BigQuery...</p></li>
+                            <li class="rounded-lg bg-slate-800/50 p-4 border border-slate-800"><h4 class="font-medium text-white">Soft</h4><p class="text-sm mt-2">Data Storytelling, Stakeholder Management...</p></li>
                         </ul>
                     </div>
                 </section>
 
-                <footer class="max-w-md pb-16 text-sm text-slate-500 sm:pb-0">
-                    <p>Coded in <a href="https://code.visualstudio.com/" target="_blank" rel="noopener noreferrer" class="font-medium text-slate-400 hover:text-teal-300 focus-visible:text-teal-300">Visual Studio Code</a>. Built with <a href="https://tailwindcss.com/" target="_blank" rel="noopener noreferrer" class="font-medium text-slate-400 hover:text-teal-300 focus-visible:text-teal-300">Tailwind CSS</a> and deployed with <a href="https://vercel.com/" target="_blank" rel="noopener noreferrer" class="font-medium text-slate-400 hover:text-teal-300 focus-visible:text-teal-300">Vercel</a>.</p>
+                <!-- Case Studies Page -->
+                <section id="casestudies" class="page-content">
+                    <h2 class="text-sm font-bold uppercase tracking-widest text-white mb-4">Case Studies</h2>
+                    <p>This is where your case studies will go. You can add project cards, detailed descriptions, and links to your work.</p>
+                </section>
+
+                <!-- Resources Page -->
+                <section id="resources" class="page-content">
+                    <h2 class="text-sm font-bold uppercase tracking-widest text-white mb-4">Resources</h2>
+                    <p>This page can contain helpful links, articles, or tools that you recommend.</p>
+                </section>
+
+                <!-- Contact Page -->
+                <section id="contact" class="page-content">
+                    <h2 class="text-sm font-bold uppercase tracking-widest text-white mb-4">Contact</h2>
+                    <p>Add your contact information or a contact form here.</p>
+                </section>
+
+                <footer class="max-w-md pb-16 text-sm text-slate-500 sm:pb-0 mt-16">
+                    <p>Coded in <a href="https://code.visualstudio.com/" target="_blank" rel="noopener noreferrer" class="font-medium text-slate-400 hover:text-teal-300">Visual Studio Code</a>. Built with <a href="https://tailwindcss.com/" target="_blank" rel="noopener noreferrer" class="font-medium text-slate-400 hover:text-teal-300">Tailwind CSS</a> and deployed with <a href="https://vercel.com/" target="_blank" rel="noopener noreferrer" class="font-medium text-slate-400 hover:text-teal-300">Vercel</a>.</p>
                 </footer>
             </main>
         </div>
     </div>
 
     <script>
-        // JavaScript for scroll-spy active navigation state
-        window.addEventListener('DOMContentLoaded', () => {
-            const sections = document.querySelectorAll('section[id]');
-            const navLinks = document.querySelectorAll('.nav-link');
-
-            const observer = new IntersectionObserver(entries => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        navLinks.forEach(link => {
-                            link.classList.remove('active');
-                            if (link.getAttribute('href').substring(1) === entry.target.id) {
-                                link.classList.add('active');
-                            }
-                        });
-                    }
-                });
-            }, { rootMargin: "-50% 0px -50% 0px" });
-
-            sections.forEach(section => {
-                observer.observe(section);
+        // JavaScript for page navigation
+        function showPage(pageId) {
+            // Hide all page content sections
+            document.querySelectorAll('.page-content').forEach(page => {
+                page.style.display = 'none';
             });
-        });
+            
+            // Show the selected page
+            const selectedPage = document.getElementById(pageId);
+            if (selectedPage) {
+                selectedPage.style.display = 'block';
+            }
+
+            // Update active state on nav links
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+            });
+            
+            // Find the link that corresponds to the pageId and add active class
+            const activeLink = document.querySelector(`.nav-link[onclick="showPage('${pageId}')"]`);
+            if(activeLink) {
+                 activeLink.classList.add('active');
+            }
+        }
     </script>
 </body>
 </html>
